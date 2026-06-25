@@ -1,27 +1,41 @@
 #include <iostream>
-
 using namespace std;
 
-int main() {
+int main ()
+{
 	
- 	
-int a,b;
+float voltage ;
 
-cout<<"Enter two intergers";
-cin >>a >> b;
+cout << "Enter voltage reading (v):";
 
-cout <<"Sum = "<< a + b << endl;
-cout << "Difference ="<< a -b << endl;
+cin >> voltage ;
 
-
-if (b != 0)
-cout <<"Quotient =" << (float)a / b << endl;
+if (voltage < 0)
+{
+	cout <<"Invalid voltage reading";
+}
+else if (voltage <=50)
+{
+	cout << "Low voltage";
+}
+else if (voltage <=240)
+{
+	cout <<"Normal voltage";
+}
+else if (voltage <=415)
+{
+	cout << "High voltage";
+}
 else
-cout<< "Division by zero not allowed."<<endl;
+{
+	cout <<"Dangerous voltage";
+}
+cout <<"("<< voltage << "v)" <<
+endl;
 
 
-	
-	
-	
+
+
+
 	return 0;
 }

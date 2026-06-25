@@ -1,9 +1,18 @@
-//Q11, Difference between Increament (++) and Decrement (--) operators
-//
-//Increment Operator (++):
-//-Increase the values of a variable by 1.
-//-Example:int a =5; a++;//a becomes 6
-//
-//Decrement OPerator (--):
-//-Decrement the value of a variable by .
-//-Example: int b=5;b--;//b becomes 4
+#include<iostream>
+using namespace std;
+
+int main(){
+	int password;
+	const int correctpassword=7272;
+	
+	cout<<"Enter password:";
+	cin>>password;
+	
+	while(password != correctpassword)
+	{
+		cout<<"Incorrectpassword.Try again:";
+	}
+	cout<<"Access granted to control panel"<<endl;
+	
+	return 0;
+}

@@ -2,12 +2,22 @@
 using namespace std;
 
 int main(){
-	int a,b;
-	cin>>a>>b;
+	double voltage;
 	
-	int larger=(a>b) ? a:b;
+	cout<<"Battery Voltage Monitoring System\n";
+	cout<<"Enter voltage readings-stops when<12V\n\n";
 	
-	cout << "Larger="<<larger;
-	
+	while(true){
+		cout<<"Enter battery voltage(Volts):";
+		cin>>voltage;
+		
+		if(voltage>=12.0){
+			cout<<"Voltage:"<<voltage<<"V-OK"<<endl;
+		}else{
+			cout<<"\n*** Battery voltage low.Recharge required.***\n";
+			break;
+		}
+	}
 	return 0;
+	
 }

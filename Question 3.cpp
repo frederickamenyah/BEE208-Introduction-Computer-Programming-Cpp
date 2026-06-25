@@ -1,14 +1,22 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
 
-int main(){
-	int a,b,c;
-	cin >>a>>b>>c;
+int main ()
+{
+	float gpa;
 	
-	if (a==b&&b==c)
-	cout<<"Equal";
+	cout << "Enter GPA :";
+	cin >> gpa;
+	
+	if (gpa >= 3.5)
+	{
+		cout <<"Eligible for enginnering scholarship." <<endl;
+	}
 	else
-	cout<<"Not equal";
+	{
+		cout<<"Not eligible for engineering scholarship." << endl;
+	}
 	
 	return 0;
+	
 }

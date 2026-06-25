@@ -1,13 +1,24 @@
-#include<iostream>
-#include<cmath>
+#include <iostream>
 using namespace std;
 
-int main(){
-	double r;
-	cin>>r;
+int main ()
+{
+	float ratedcurrent,measuredcurrent;
 	
-	double area=3.14159*pow(r,2);
-	cout<<"Area="<<area<<endl;
+	cout<<"Enter rated current (A) :";
+	cin >> ratedcurrent;
+	
+	cout <<"Enter measured current (A) :";
+	cin >>measuredcurrent ;
+	
+	if (measuredcurrent >ratedcurrent)
+	{
+		cout <<"Overload detected.Circuit breaker should trip."<< endl;
+	}
+	else
+	{
+		cout <<"Current is within safe limit."<<endl;
+	}
 	
 	return 0;
 }

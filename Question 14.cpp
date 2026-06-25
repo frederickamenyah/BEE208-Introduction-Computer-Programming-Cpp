@@ -1,11 +1,28 @@
-//Q14.Difference between left shift (<<) and Right shift (>>)operator 
-//
-//Left shift operator (<<):
-//-Shift all bits to the left by a specified number of positions.
-//-Each left shift generally multipies the number by 2.
-//-Example: 8 << 1=16
-//
-//Right shift operator (>>):
-//-Shift all bits t0 the right by a specified number of positions.
-//-Each right shift generally divides the number by 2.
-//-Example: 8 >> 1=4
+#include<iostream>
+using namespace std;
+
+int main(){
+	float temp;
+	float sum=0;
+	int count=0;
+	
+	cout<<"=====Temperature Reading Analyzer ====="<<endl;
+	
+	for(int i=1;i<=10;i++){
+		cout<<"Enter temperature reading"<<i<<"(^0C):";
+		cin>>temp;
+		
+		if(temp<0){
+			cout<<"Invalid reading(below0^0C). Skipping..."<<endl;
+			continue;
+		}
+		sum +=temp;
+		count++;
+	}
+	if(count>0){
+		cout<<"Average temperature="<<(sum/count)<<"^0C"<<endl;
+	}else{
+		cout<<"No valid readings entered."<<endl;
+	}
+	return 0;
+}

@@ -2,13 +2,25 @@
 using namespace std;
 
 int main(){
-	float a,b;
+	float power;
+	float totalLoad=0;
 	
-	cout <<"Enter two floating-point numbers:";
-	cin>>a>>b;
+	cout<<"=====Electrical Load Limit Checker ====="<<endl;
+	cout<<"Maximum load limit:3000W"<<endl;
 	
-	float larger=(a>b) ? a:b;
-	 cout <<"Larger number="<<larger;
-	 
-	 return 0;
+	while(totalLoad<=3000){
+		cout<<"Enter appliance power reting (W):";
+		cin>>power;
+		
+		if(totalLoad+power>3000){
+			cout<<"Load limit exceeded."<<endl;
+			break;
+		}else{
+			totalLoad+=power;
+			cout<<"Current totalload:"<<totalLoad<<"w"<<endl;
+		}
+	}
+	cout<<"Final total load:"<<totalLoad<<"W "<<endl;
+	
+	return 0;
 }
